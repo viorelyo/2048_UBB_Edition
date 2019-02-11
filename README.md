@@ -8,7 +8,7 @@ The game also created fun among teachers 🎓
 
 </br>
 
-<img src="/screenshots/logo.PNG" width="128">
+<img src="/screenshots/logo.png" width="80">
 
 ## Prerequisites
 * IntelliJ IDEA Ultimate
@@ -20,6 +20,6 @@ The game also created fun among teachers 🎓
 ## Demo
 Example of gameplay
 
-<img src="/screenshots/screenshot1.PNG" width="500">
+<img src="/screenshots/screenshot1.PNG" width="700">
 
 Try to see who is next...  😎
