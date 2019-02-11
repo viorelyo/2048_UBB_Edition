@@ -25,7 +25,7 @@ public class GameBean {
      * Constructor for Game Bean
      */
     public GameBean() {
-        this.target = 8;
+        this.target = 128;
         this.tryForNewMoves = false;
         launchGame();
     }
