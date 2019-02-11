@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://java.sun.com/jsf/html"
+      xmlns:x="http://primefaces.org/ui">
+
+   <h:head>
+      <title>2048UBB</title>
+       <link rel="stylesheet" type="text/css" href="resources/styles/style.css"/>
+       <link rel="icon" href="resources/images/logo.png"/>
+
+   </h:head>
+
+   <h:body>
+      <h:form>
+        <x:hotkey bind="up" update="output score gameOver gameWon" action="#{gbean.UPkeypress}"/>
+        <x:hotkey bind="down" update="output score gameOver gameWon" action="#{gbean.DOWNkeypress}"/>
+        <x:hotkey bind="left" update="output score gameOver gameWon" action="#{gbean.LEFTkeypress}"/>
+        <x:hotkey bind="right" update="output score gameOver gameWon" action="#{gbean.RIGHTkeypress}"/>
+
+
+        <h:panelGroup id="container" layout="block" styleClass="centerContainer">
+
+            <x:dialog id="gameOver" visible="#{gbean.gameOver}" showEffect="puff" widgetVar="dlg2" resizable="false" closable="true" draggable="false" styleClass="gameOver"  width="459" height="362">
+                <h:outputLabel value="Restanta!"/>
+            </x:dialog>
+
+            <x:dialog id="gameWon" visible="#{gbean.gameWon}" showEffect="puff" widgetVar="dlg2" resizable="false" closable="true" draggable="false" styleClass="gameWon" width="459" height="362">
+                <h:outputLabel value="You win!" styleClass="winLbl"/>
+            </x:dialog>
+
+
+            <h:panelGroup id="heading" layout="block" styleClass="headerContainer">
+                <h:outputLabel value="2048UBB" styleClass="gameTitle"/>
+
+                <h:panelGroup id="score_container" layout="block" styleClass="scoreContainer">
+                    <h:outputLabel value="SCORE" styleClass="scoreLabel"/>
+                    <h:outputLabel id="score" value="#{gbean.scoreConverted}" styleClass="scoreValueLabel"/>
+                </h:panelGroup>
+            </h:panelGroup>
+
+            <p:panelGrid id="output" columns="4" cellspacing="10"
+                      styleClass="gameBoard">
+
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[0][0])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[0][1])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[0][2])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[0][3])}" height="100px" width="100px" styleClass="imageCell"/>
+
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[1][0])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[1][1])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[1][2])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[1][3])}" height="100px" width="100px" styleClass="imageCell"/>
+
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[2][0])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[2][1])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[2][2])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[2][3])}" height="100px" width="100px" styleClass="imageCell"/>
+
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[3][0])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[3][1])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[3][2])}" height="100px" width="100px" styleClass="imageCell"/>
+                <p:graphicImage library="images" name="#{gbean.translateToImg(gbean.cells[3][3])}" height="100px" width="100px" styleClass="imageCell"/>
+            </p:panelGrid>
+
+            <h:panelGroup id="bottom" layout="block" styleClass="bottomContainer">
+                <x:commandButton value="New Game" action="#{gbean.launchGame}" update="output gameOver gameWon score" styleClass="newGameBtn"/>
+            </h:panelGroup>
+
+            <h:panelGroup id="dev" layout="block" styleClass="devContainer">
+                <h:outputLabel value="©GV" styleClass="devLbl"/>
+            </h:panelGroup>
+        </h:panelGroup>
+      </h:form>
+   </h:body>
+</html>

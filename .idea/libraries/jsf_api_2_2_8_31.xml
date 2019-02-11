@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jsf-api-2.2.8-31">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jsf-api-2.2.8-31.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

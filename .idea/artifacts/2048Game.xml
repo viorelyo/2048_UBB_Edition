@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="2048Game">
+    <output-path>$PROJECT_DIR$/out/artifacts/2048Game</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="2048Game/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="2048Game" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jsf-impl-2.2.8-31.jar" />
+          <element id="library" level="project" name="jsf-api-2.2.8-31" />
+          <element id="library" level="project" name="org.primefaces:primefaces:6.2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,184 @@
+.gameTitle {
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #776e65;
+}
+
+.scoreContainer {
+    display: grid;
+    position: relative;
+    float: right;
+    background-color: #bbada0;
+    border-radius: 5px;
+    height: 35px;
+    width: 125px;
+    padding: 10px 25px 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gameBoard {
+    border-radius: 10px;
+    border: 1px #bbada0 solid;
+    background-color: #bbada0;
+}
+
+.imageCell {
+    border-radius: 10px;
+    animation: pulse 1s 1;
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.centerContainer {
+    display: table;
+    margin: 0 auto;
+}
+
+.headerContainer {
+    margin-bottom: 15px;
+}
+
+.scoreLabel {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 15px;
+    color: #eee4da;
+}
+
+.scoreValueLabel {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 18px;
+    color: white;
+}
+
+.bottomContainer {
+    margin-top: 15px;
+}
+
+.newGameBtn {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 5px !important;
+    font-family: sans-serif !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+    color: #f9f6f2 !important;
+    background-color: #8f7a66 !important;
+    height: 40px !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+    transition: all 0.5s !important;
+    border: none !important;
+}
+
+.newGameBtn:hover {
+    background-color: #776656 !important;
+}
+
+.gameOver {
+    background: rgba(238, 228, 218, 0.5);
+    top: 80px !important;
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #544337;
+    border-radius: 10px;
+}
+
+.gameWon {
+    background: rgba(255, 235, 140, 0.5);
+    top: 80px !important;
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+
+.devContainer {
+    margin-top: 80px;
+}
+
+
+.devLbl {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flipInX 5s 1, hue 80s infinite linear;
+}
+
+@keyframes hue {
+    from { filter: hue-rotate(0deg); }
+    to   { filter: hue-rotate(360deg); }
+}
+
+
+@keyframes flipInX {
+    from {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+
+
+
+
+
+
