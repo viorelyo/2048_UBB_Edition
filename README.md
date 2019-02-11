@@ -8,7 +8,7 @@ The game also created fun among teachers 🎓
 
 </br>
 
-<img src="/screenshots/logo.png" width="128">
+<p align="center"><img src="/screenshots/logo_cs.png" width="128"></p>
 
 ## Prerequisites
 * IntelliJ IDEA Ultimate
